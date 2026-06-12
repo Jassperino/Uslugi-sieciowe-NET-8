@@ -1,0 +1,53 @@
+@WeatherAPI_HostAddress = http://localhost:5185
+
+GET {{WeatherAPI_HostAddress}}/temperature
+Accept: application/json
+
+###
+
+GET {{WeatherAPI_HostAddress}}/wind-direction
+Accept: application/json
+
+###
+
+GET {{WeatherAPI_HostAddress}}/weather/Warszawa
+Accept: application/json
+
+###
+
+POST {{WeatherAPI_HostAddress}}/cities
+Content-Type: application/json
+
+{
+  "name": "Warszawa"
+}
+
+###
+
+GET {{WeatherAPI_HostAddress}}/cities
+Accept: application/json
+
+###
+
+GET {{WeatherAPI_HostAddress}}/cities/1
+Accept: application/json
+
+###
+
+PUT {{WeatherAPI_HostAddress}}/cities/1
+Content-Type: application/json
+
+{
+  "name": "Krakow"
+}
+
+###
+
+DELETE {{WeatherAPI_HostAddress}}/cities/1
+
+###
+
+GET {{WeatherAPI_HostAddress}}/api/TestErrors
+Accept: application/json
+
+###
